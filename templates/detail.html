@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+    <!--this installs leaflet-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     </head>
@@ -9,7 +10,7 @@
 		<h1>{{ object.full_name }}, a {{ object.age }}-year-old {{ object.race }} {{ object.gender|lower }}, died on {{ object.date }}</h1>
 		<!-- We are calling a bunch of methods from leaflet. 16 is the zoom level-->
 		        <script type="text/javascript">
-            var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 13);
+            var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 16);
          // connects you to open street map 
             var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
