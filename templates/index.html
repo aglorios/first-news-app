@@ -3,5 +3,30 @@
     <head></head>
     <body>
         <h1>Deaths during the L.A. riots</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Type</th>
+                <th>Gender</th>
+                <th>Race</th>
+            </tr>
+			<!--can do computer program logic; loops etc
+			we are doing a for list comprehension where we every dictionary in our list is name obj and we will access and use it to fit inside a snippet of html and that we be repeated again and again.-->
+            {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.full_name }}</td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.age}}</td>
+                <td>{{ obj.address}}</td>
+                <td>{{ obj.type }}</td>
+                <!-- jinj.pocoo.org/doc/2.9/templates/#builtin-filters-->
+                <td>{{ obj.gender|upper }}</td>
+                <td>{{ obj.race }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </body>
 </html>
