@@ -17,7 +17,8 @@
 			we are doing a for list comprehension where we every dictionary in our list is name obj and we will access and use it to fit inside a snippet of html and that we be repeated again and again.-->
             {% for obj in object_list %}
             <tr>
-                <td>{{ obj.full_name }}</td>
+                <td><a href="/{{ obj.id }}/">{{ 
+                obj.full_name }}</a></td>
                 <td>{{ obj.date }}</td>
                 <td>{{ obj.age}}</td>
                 <td>{{ obj.address}}</td>
